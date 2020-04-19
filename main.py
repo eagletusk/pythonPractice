@@ -19,8 +19,13 @@ import sys
 # result1 = rotateLeft.go()
 # print(result1)
 
-#binary Searh Tree
-import binarySearchTree
-binarySearchTree.go()
+# #binary Searh Tree
+# import binarySearchTree
+# binarySearchTree.go()
 
+
+#HackerRank STD IN
+#not working
+import hackerRankSTDIN
+hackerRankSTDIN.go()
 
