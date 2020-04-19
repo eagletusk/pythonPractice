@@ -13,10 +13,9 @@ import rotateLeft
 import greet
 greet.greet()
 
-a= [1,2,3]
-d = 1
-result = rotateLeft.rotLeft(a, d)
-print(result)
+result1 = rotateLeft.go()
+print(result1)
+
 
 
 #     Input arr[] = [1, 2, 3, 4, 5, 6, 7], d = 2, n =7
