@@ -14,9 +14,13 @@ import sys
 # import greet
 # greet.greet()
 
-#rotateLeft file
-import rotateLeft
-result1 = rotateLeft.go()
-print(result1)
+# #rotateLeft file
+# import rotateLeft
+# result1 = rotateLeft.go()
+# print(result1)
+
+#binary Searh Tree
+import binarySearchTree
+binarySearchTree.go()
 
 
