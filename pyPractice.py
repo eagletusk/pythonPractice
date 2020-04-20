@@ -99,5 +99,18 @@ def go():
   #  print(bucket[0].is_integer())
     return not(bucket[0].is_integer())
 
-  Test.assert_equals(consecutive_ducks(17), True)
+  # Test.assert_equals(consecutive_ducks(17), True)
+
+
+  def getCount(inputStr):
+    vowels = 'aeiou'
+    num_vowels = 0
+    # your code here
+    for x in inputStr.lower():
+#         print(x) 
+        if (x in vowels):
+#             print('x = ', x)
+            num_vowels +=1
+    return num_vowels
         
+  Test.assert_equals(getCount("abracadabra"), 5)
