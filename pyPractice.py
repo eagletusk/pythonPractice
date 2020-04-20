@@ -52,8 +52,34 @@ def go():
       # print(arr1[i], i) 
     return sum
 
-  Test.it("Basic test")
-  Test.assert_equals(array_plus_array([1, 2, 3], [4, 5, 6]), 21)
-  Test.assert_equals(array_plus_array([-1, -2, -3], [-4, -5, -6]), -21)
-  Test.assert_equals(array_plus_array([0, 0, 0], [4, 5, 6]), 15)
-  Test.assert_equals(array_plus_array([100, 200, 300], [400, 500, 600]), 2100)
+  # Test.it("Basic test")
+  # Test.assert_equals(array_plus_array([1, 2, 3], [4, 5, 6]), 21)
+  # Test.assert_equals(array_plus_array([-1, -2, -3], [-4, -5, -6]), -21)
+  # Test.assert_equals(array_plus_array([0, 0, 0], [4, 5, 6]), 15)
+  # Test.assert_equals(array_plus_array([100, 200, 300], [400, 500, 600]), 2100)
+
+
+  # Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integer's divisors(except for 1 and the number itself), from smallest to largest. If the number is prime return the string '(integer) is prime' (null in C#) (use Either String a in Haskell and Result<Vec<u32>, String> in Rust).
+
+  # Example:
+  # divisors(12); #should return [2,3,4,6]
+  # divisors(25); #should return [5]
+  # divisors(13); #should return "13 is prime"
+
+  def divisors(integer):
+      container = []
+      for x in range(2,integer-1):
+          if (integer%x == 0):
+              #  print(x)
+              container.append(x)
+              # print(container)
+              # print(integer%x)
+      if (len(container) == 0 ):
+          string = f"{integer} is prime"
+          return string
+      return container
+
+
+  Test.assert_equals(divisors(15), [3, 5]);
+  Test.assert_equals(divisors(12), [2, 3, 4, 6]);
+  Test.assert_equals(divisors(13), "13 is prime");
