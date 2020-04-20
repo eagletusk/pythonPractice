@@ -80,6 +80,24 @@ def go():
       return container
 
 
-  Test.assert_equals(divisors(15), [3, 5]);
-  Test.assert_equals(divisors(12), [2, 3, 4, 6]);
-  Test.assert_equals(divisors(13), "13 is prime");
+  # Test.assert_equals(divisors(15), [3, 5]);
+  # Test.assert_equals(divisors(12), [2, 3, 4, 6]);
+  # Test.assert_equals(divisors(13), "13 is prime");
+
+#   Positive integers have so many gorgeous features. Some of them could be expressed as a sum of two or more consecutive positive numbers.
+
+# Consider an Example :
+# 10 , could be expressed as a sum of 1 + 2 + 3 + 4.
+  import math 
+  from fractions import Fraction
+
+  def consecutive_ducks(n):
+    bucket = [0]
+    bucket[0] =math.log(n,2)
+  #  print(Fraction.from_float(bucket[0]),bucket[0])
+    #print(is_integer(bucket[0]))
+  #  print(bucket[0].is_integer())
+    return not(bucket[0].is_integer())
+
+  Test.assert_equals(consecutive_ducks(17), True)
+        
