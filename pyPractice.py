@@ -30,10 +30,28 @@ def go():
     #code away!
     fname = name[0]
     lnameList = name.split()
-    print(lnameList)
+    lname = lnameList[1][0]
+    return f'{fname}.{lname}'
     
-  Test.assert_equals(abbrevName("Sam Harris"), "S.H");
-  Test.assert_equals(abbrevName("Patrick Feenan"), "P.F");
-  Test.assert_equals(abbrevName("Evan Cole"), "E.C");
-  Test.assert_equals(abbrevName("P Favuzzi"), "P.F");
-  Test.assert_equals(abbrevName("David Mendieta"), "D.M");
+  # Test.assert_equals(abbrevName("Sam Harris"), "S.H");
+  # Test.assert_equals(abbrevName("Patrick Feenan"), "P.F");
+  # Test.assert_equals(abbrevName("Evan Cole"), "E.C");
+  # Test.assert_equals(abbrevName("P Favuzzi"), "P.F");
+  # Test.assert_equals(abbrevName("David Mendieta"), "D.M");
+
+  def array_plus_array(arr1,arr2):
+    arr1 = arr1 + arr2
+    print(arr1)
+    sum = 0
+    # Using for loop 
+    i =0
+    for i in range(len(arr1)): 
+      sum += arr1[i]
+      # print(arr1[i], i) 
+    return sum
+
+  # Test.it("Basic test")
+  Test.assert_equals(array_plus_array([1, 2, 3], [4, 5, 6]), 21)
+  Test.assert_equals(array_plus_array([-1, -2, -3], [-4, -5, -6]), -21)
+  Test.assert_equals(array_plus_array([0, 0, 0], [4, 5, 6]), 15)
+  Test.assert_equals(array_plus_array([100, 200, 300], [400, 500, 600]), 2100)
