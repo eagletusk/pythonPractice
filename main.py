@@ -26,6 +26,9 @@ import sys
 
 #HackerRank STD IN
 #not working
-import hackerRankSTDIN
-hackerRankSTDIN.go()
+# import hackerRankSTDIN
+# hackerRankSTDIN.go()
 
+#Python Practice
+import pyPractice
+pyPractice.go()
