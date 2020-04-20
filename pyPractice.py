@@ -122,7 +122,7 @@ def go():
             num_vowels +=1
     return num_vowels
         
-  # Test.assert_equals(getCount("abracadabra"), 5)
+  #  Test.assert_equals(getCount("abracadabra"), 5)
 
 
   def find_it(seq):
@@ -140,9 +140,27 @@ def go():
   #            print(result)
       return result
 
-  test.assert_equals(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]), 5)
-  test.assert_equals(find_it([1,1,2,-2,5,2,4,4,-1,-2,5]), -1); 
-  test.assert_equals(find_it([20,1,1,2,2,3,3,5,5,4,20,4,5]), 5);
-  test.assert_equals(find_it([10]), 10);
-  test.assert_equals(find_it([1,1,1,1,1,1,10,1,1,1,1]), 10);
-  test.assert_equals(find_it([5,4,3,2,1,5,4,3,2,10,10]), 1);
+  # test.assert_equals(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]), 5)
+  # test.assert_equals(find_it([1,1,2,-2,5,2,4,4,-1,-2,5]), -1); 
+  # test.assert_equals(find_it([20,1,1,2,2,3,3,5,5,4,20,4,5]), 5);
+  # test.assert_equals(find_it([10]), 10);
+  # test.assert_equals(find_it([1,1,1,1,1,1,10,1,1,1,1]), 10);
+  # test.assert_equals(find_it([5,4,3,2,1,5,4,3,2,10,10]), 1);
+
+from typing import List
+class Solutions:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        numsMap = {} # dict
+        for i in range(len(nums)):
+            diff = target - nums[i]
+            
+            if diff in numsMap:
+                print(numsMap, diff, target, nums[i], i)
+                print([numsMap[diff], i])
+                return [numsMap[diff], i]
+            else:
+                numsMap[nums[i]] = i
+        print(numsMap, diff, target, nums[i], i)
+
+abc=[]
+abc = Solutions.twoSum(abc,[2, 7, 11, 15],11)
