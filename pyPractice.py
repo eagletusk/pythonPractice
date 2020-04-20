@@ -148,19 +148,43 @@ def go():
   # test.assert_equals(find_it([5,4,3,2,1,5,4,3,2,10,10]), 1);
 
 from typing import List
-class Solutions:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        numsMap = {} # dict
-        for i in range(len(nums)):
-            diff = target - nums[i]
+# class Solutions:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         numsMap = {} # dict
+#         for i in range(len(nums)):
+#             diff = target - nums[i]
             
-            if diff in numsMap:
-                print(numsMap, diff, target, nums[i], i)
-                print([numsMap[diff], i])
-                return [numsMap[diff], i]
-            else:
-                numsMap[nums[i]] = i
-        print(numsMap, diff, target, nums[i], i)
+#             if diff in numsMap:
+#                 print(numsMap, diff, target, nums[i], i)
+#                 print([numsMap[diff], i])
+#                 return [numsMap[diff], i]
+#             else:
+#                 numsMap[nums[i]] = i
+#         print(numsMap, diff, target, nums[i], i)
 
-abc=[]
-abc = Solutions.twoSum(abc,[2, 7, 11, 15],11)
+# abc=[]
+# abc = Solutions.twoSum(abc,[2, 7, 11, 15],11)
+
+class Solution:
+    def decompressRLElist(self, nums: List[int]) -> List[int]:
+        sublist = []
+        x = 0;
+        while x < len(nums):
+            # print(x, sublist, x+2, len(nums))
+            freq = nums[x]
+            value = nums[x+1]
+            # print(freq, value)
+            # print('range freq', range(freq))
+            for y in range(freq):
+                sublist.append(value)
+            if ((x+2)< len(nums)):
+                x= x+2
+            else: 
+                break
+        return sublist
+           
+            
+            
+abc = []            
+abc = Solution.decompressRLElist(abc,[1,2,3,4])   
+print(abc)
