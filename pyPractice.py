@@ -4,6 +4,8 @@ class Test:
         return print('true')
       else:
         return print('false')
+    def it(a):
+      return print (f'{a}')
 
 
 def go(): 
@@ -50,7 +52,7 @@ def go():
       # print(arr1[i], i) 
     return sum
 
-  # Test.it("Basic test")
+  Test.it("Basic test")
   Test.assert_equals(array_plus_array([1, 2, 3], [4, 5, 6]), 21)
   Test.assert_equals(array_plus_array([-1, -2, -3], [-4, -5, -6]), -21)
   Test.assert_equals(array_plus_array([0, 0, 0], [4, 5, 6]), 15)
