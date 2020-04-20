@@ -7,6 +7,15 @@ class Test:
     def it(a):
       return print (f'{a}')
 
+class test: 
+    def assert_equals(a, b):
+      if (a == b):
+        return print('true')
+      else:
+        return print('false')
+    def it(a):
+      return print (f'{a}')
+
 
 def go(): 
   # # why is this a float? 
@@ -113,4 +122,27 @@ def go():
             num_vowels +=1
     return num_vowels
         
-  Test.assert_equals(getCount("abracadabra"), 5)
+  # Test.assert_equals(getCount("abracadabra"), 5)
+
+
+  def find_it(seq):
+      bucket = {}
+      result = -1
+      for x in seq:
+          if not x in bucket:
+              bucket[x] =  1
+          else: 
+              bucket[x] +=  1
+  #        print(bucket)
+      for key in bucket:
+          if (bucket[key]%2 != 0):
+              result = key
+  #            print(result)
+      return result
+
+  test.assert_equals(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]), 5)
+  test.assert_equals(find_it([1,1,2,-2,5,2,4,4,-1,-2,5]), -1); 
+  test.assert_equals(find_it([20,1,1,2,2,3,3,5,5,4,20,4,5]), 5);
+  test.assert_equals(find_it([10]), 10);
+  test.assert_equals(find_it([1,1,1,1,1,1,10,1,1,1,1]), 10);
+  test.assert_equals(find_it([5,4,3,2,1,5,4,3,2,10,10]), 1);
