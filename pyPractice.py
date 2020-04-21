@@ -234,31 +234,28 @@ def go():
   # test.assert_equals(find_it([5,4,3,2,1,5,4,3,2,10,10]), 1);
 
   def accum(s):
-    # your code
     container = []
     result = []
+    j =0
     for i in range(len(s)):
         container.append([s[i]])
-#         print(container)
-        j = 0
-#         print(range(len(container)))
-    letter = 'a'
-#     for a in range(len(container)):    
-    j =0
+
     for increment in range(len(container)):
         letter = ''.join(container[increment]).upper()
         result.append(letter.upper())
         j=0
+
         while j < increment: 
-#             print('j = ', j, 'increment = ', increment)
             result.append(letter.lower())
             j+=1
+
         result.append('-')
+        
     result.pop(len(result)-1)
     a = ''.join(result)
+
     return a
-#     print(type(a))
-#     print(a)      
+  
 
   Test.it("Basic tests")
   Test.assert_equals(accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
