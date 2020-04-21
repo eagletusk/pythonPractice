@@ -256,22 +256,53 @@ def go():
 
   #   return a
 
+  # def accum(s):
+  #     str = ""
+  #     for i in range(0,len(s)):
+  #       str+= s[i].upper()
+  #       str+= s[i].lower()*i
+  #       if i != len(s)-1:
+  #         str += "-"
+  #     print(str)
+  #     return str
+
   def accum(s):
-      str = ""
-      for i in range(0,len(s)):
-        str+= s[i].upper()
-        str+= s[i].lower()*i
-        if i != len(s)-1:
-          str += "-"
+    str = s[0].capitalize()
+    for i in range(1,len(s)):
       print(str)
-      return str
+      str += "-" + (str[i]*(i+1)).capitalize()
+    return str
 
 
 
+  # Test.it("Basic tests")
+  # Test.assert_equals(accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
+  # Test.assert_equals(accum("NyffsGeyylB"), "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb")
+  # Test.assert_equals(accum("MjtkuBovqrU"), "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu")
+  # Test.assert_equals(accum("EvidjUnokmM"), "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm")
+  # Test.assert_equals(accum("HbideVbxncC"), "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc")
 
-  Test.it("Basic tests")
-  Test.assert_equals(accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
-  Test.assert_equals(accum("NyffsGeyylB"), "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb")
-  Test.assert_equals(accum("MjtkuBovqrU"), "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu")
-  Test.assert_equals(accum("EvidjUnokmM"), "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm")
-  Test.assert_equals(accum("HbideVbxncC"), "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc")
+  def digital_root(n):
+    # ...
+    # to string
+    def dividor(b):
+        bkt = []
+        m = b
+        sum = 0
+        while m>0.0 :
+            bkt.append(m%10)
+            m = m//10
+#             print(bkt,m)
+        for a in range(len(bkt)):
+            sum += bkt[a]
+#         print(sum)
+        return sum
+    sum1 = dividor(n)         
+    while (sum1//10 != 0):          
+        if (sum1//10 != 0):
+            sum1 = dividor(sum1)
+#             print(sum1)
+
+    return sum1
+
+  print(digital_root(356))
