@@ -233,29 +233,41 @@ def go():
   # test.assert_equals(find_it([1,1,1,1,1,1,10,1,1,1,1]), 10);
   # test.assert_equals(find_it([5,4,3,2,1,5,4,3,2,10,10]), 1);
 
-  def accum(s):
-    container = []
-    result = []
-    j =0
-    for i in range(len(s)):
-        container.append([s[i]])
+  # def accum(s):
+  #   container = []
+  #   result = []
+  #   j =0
+  #   for i in range(len(s)):
+  #       container.append([s[i]])
 
-    for increment in range(len(container)):
-        letter = ''.join(container[increment]).upper()
-        result.append(letter.upper())
-        j=0
+  #   for increment in range(len(container)):
+  #       letter = ''.join(container[increment]).upper()
+  #       result.append(letter.upper())
+  #       j=0
 
-        while j < increment: 
-            result.append(letter.lower())
-            j+=1
+  #       while j < increment: 
+  #           result.append(letter.lower())
+  #           j+=1
 
-        result.append('-')
+  #       result.append('-')
         
-    result.pop(len(result)-1)
-    a = ''.join(result)
+  #   result.pop(len(result)-1)
+  #   a = ''.join(result)
 
-    return a
-  
+  #   return a
+
+  def accum(s):
+      str = ""
+      for i in range(0,len(s)):
+        str+= s[i].upper()
+        str+= s[i].lower()*i
+        if i != len(s)-1:
+          str += "-"
+      print(str)
+      return str
+
+
+
 
   Test.it("Basic tests")
   Test.assert_equals(accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu")
