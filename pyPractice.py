@@ -185,6 +185,17 @@ class Solution:
            
             
             
+# abc = []            
+# abc = Solution.decompressRLElist(abc,[1,2,3,4])   
+# print(abc)
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        a = set(nums)
+        for x in range(len(a)+1):
+            if x not in a:
+                return x
+
 abc = []            
-abc = Solution.decompressRLElist(abc,[1,2,3,4])   
+abc = Solution.missingNumber(abc,[0,1,2,4])   
 print(abc)
