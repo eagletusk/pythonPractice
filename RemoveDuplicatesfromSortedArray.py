@@ -1,20 +1,33 @@
 # RemoveDuplicatesfromSortedArray.py
 
+
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        p1 =0
-        p2 =0 
         
         i =1
-        for j in range(len(nums)) :
-            print(nums, j, i)
+        j =0
+        
+        if len(nums) ==1:
+            return len(nums)
+        
+        if len(nums) ==2:
             if (nums[j]==nums[i]):
                 del nums[j]
-                j-=1
-            if i < len(nums)-1:
-                i+=1
-            else:
-                break
+            return len(nums)
+        
+        while j<len(nums) :
+            while j>=1:
+                print(nums, j, i)
+                if (nums[j]==nums[i]):
+                    del nums[j]
+                    j-=1
+                    i-=1
+                if i < len(nums)-1:
+                    i+=1
+                    j+=1
+                elif(j==-1):
+                    j=0
+                else:
+                    return len(nums)
         print(nums)
         return len(nums)
-        
