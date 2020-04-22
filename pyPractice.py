@@ -305,52 +305,25 @@ def go():
 
     return sum1
 
-  print(digital_root(356), "top")
+  # print(digital_root(356), "top")
 
   def persistence(n):
-      # your code
-    def dividor(b):
-        bkt = []
-        m = b
-        sum = 0
-        while m>0.0 :
-            bkt.append(m%10)
-            m = m//10
-            print(bkt,m)
-        if len(bkt)>1:
-          for a in range(len(bkt)-1):
-              sum = bkt[a]*bkt[a+1]
-              print(bkt[a],bkt[a+1],range(len(bkt)-1),sum)
-        else: 
-          sum = bkt[0]
-          print('else',sum)
-        return sum
-    sum1 = dividor(n)         
-    while (sum1//10 != 0):          
-        if (sum1//10 != 0):
-            sum1 = dividor(sum1)
-#             print(sum1)
-
-    return sum1
-
-
-      # bkt = []
-      # value = n
-      # total = n
-      # j,i = 0,0
-      # while (value >0):#(value//10 != 0):          
-      #   j+=1
-      #   while (i <3):#(total>0):
-      #     j+=1
-      #     bkt.append(value%10) 
-      #     value = value//10
-      #     print(bkt,value)
-      #     for i in range(len(bkt)-1):
-      #         total = bkt[i]*bkt[i+1]
-      #     if total//10 !=0 :
-      #         value = total
-      # print("out",bkt, total)                
-      # return total     
-
+      count = 0
+      def p(m,count):
+          root = 1                
+          for d in str(m):        
+              root *= int(d)
+          if len(str(root)) > 1:
+              count +=1    
+              print(root)
+              root = p(root,count)
+          elif len(str(n)) ==1: 
+              return count
+          else:
+              count +=1  
+              return count
+          return root
+      return p(n,0)   
       
-  print(persistence(44))
+  print(persistence(999))
+  print(persistence(9))
