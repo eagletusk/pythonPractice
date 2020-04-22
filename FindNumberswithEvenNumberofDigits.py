@@ -10,4 +10,3 @@ class Solution:
             count =0
         return len(bkt)
             
-        

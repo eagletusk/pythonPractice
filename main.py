@@ -33,3 +33,4 @@ import sys
 import pyPractice
 pyPractice.go()
 
+print(FindNumberswithEvenNumberofDigits.findNumbers([23,34,2,32323]))
