@@ -1,4 +1,5 @@
 import ctypes
+import sys
 
 
 class DynamicArray(object):
@@ -29,20 +30,33 @@ class DynamicArray(object):
   def _resize(self,new_cap):
 
     B = self.make_array(new_cap)
+   
 
     for k in range(self.n):
       B[k] = self.A[k]
 
     self.A = B
     self.capacity = new_cap
+    print(sys.getsizeof(self.A), self.capacity,self.n)
 
   def make_array(self,new_cap):
-
+    # make raw array
     return (new_cap * ctypes.py_object)()
 
 arr = DynamicArray()
-arr.append(2)
-print(len(arr))
-print(arr[0])
+
+arr.append(3)
+arr.append(3)
+arr.append(3)
+arr.append(3)
+arr.append(3)
+arr.append(3)
+arr.append(3)
+arr.append(3)
+print(arr.capacity)
+
+
+
+print(sys.getsizeof(arr))
 
       
