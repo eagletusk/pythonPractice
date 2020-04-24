@@ -30,9 +30,11 @@ import sys
 # hackerRankSTDIN.go()
 
 #Python Practice
-import pyPractice
+# import pyPractice
 # pyPractice.go()
 
 # print(FindNumberswithEvenNumberofDigits.findNumbers([23,34,2,32323]))
-import CheckIfNandItsDoubleExist
-from typing import List
+# import CheckIfNandItsDoubleExist
+
+
+import ValidMountainArray
