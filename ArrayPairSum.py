@@ -1,21 +1,19 @@
 def pair_sum(arr,k):
     
-    count = 0
-    
-    arr.sort()
+    count = 0    
+    # arr.sort()
     lst = arr
-    print (lst)
-    cnt = []
+    # print (lst)
     i = 0
 
     while i < len(lst):
-      print("k-1 =", k-lst[i], lst)
+      # print("k-1 =", k-lst[i], lst)
       if k-lst[i] in lst:
-        print("k-1 =", k-lst[i], lst)
+        # print("k-1 =", k-lst[i], lst)
         count +=1
         lst.remove(k-lst[i])
         lst.remove(lst[i])
-        print(lst, i, k-i, count)
+        # print(lst, i, k-i, count)
         i = 0
       else:
         i+= 1
