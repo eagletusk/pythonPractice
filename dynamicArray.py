@@ -13,8 +13,8 @@ class DynamicArray(object):
 
   def __getitem__(self,k):
 
-    if not 0 <= k < self.k:
-      return IndesxError('')
+    if not 0 <= k < self.n:
+      return IndexError('this is an index error')
     
     return self.A[k]
   
@@ -40,7 +40,9 @@ class DynamicArray(object):
 
     return (new_cap * ctypes.py_object)()
 
-sol = DynamicArray()
-
+arr = DynamicArray()
+arr.append(2)
+print(len(arr))
+print(arr[0])
 
       
