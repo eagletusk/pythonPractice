@@ -37,4 +37,6 @@ import sys
 # import CheckIfNandItsDoubleExist
 
 
-import ValidMountainArray
+# import ValidMountainArray
+import dynamicArray
+
