@@ -31,6 +31,8 @@ import sys
 
 #Python Practice
 import pyPractice
-pyPractice.go()
+# pyPractice.go()
 
-print(FindNumberswithEvenNumberofDigits.findNumbers([23,34,2,32323]))
+# print(FindNumberswithEvenNumberofDigits.findNumbers([23,34,2,32323]))
+import CheckIfNandItsDoubleExist
+from typing import List
