@@ -1,24 +1,69 @@
 # Given an array of integers (positive and negative) find the largest continuous sum.
 
+# def large_cont_sum(arr):
+#   bkt = []
+#   sum1 = 0
+
+#   def summer(rge):
+#     sum1 = 0
+#     for j in range(rge):
+#       sum1 += arr[j]
+#     return sum1
+
+
+#   for i in range(len(arr)):
+#     print(bkt)
+#     bkt.append(summer(i))
+
+#   if max(bkt) == 0: 
+#     return max(arr)
+#   else: 
+#     return max(bkt)
+
+
 def large_cont_sum(arr):
+  if len(arr) == 2:
+    return (max(arr))
+
+  if len(arr) == 1:
+    return arr[0]
+
+  i = 0
+  j = 0
+  sum = 0
   bkt = []
-  sum1 = 0
+  while j < len(arr):
+    while i < len(arr)-1:
+      sum += arr[i]
+      i+=1
+      print(i)
+    bkt.append(sum)
+    sum = 0
+    j+=1
+    i = j
+ 
+  print(bkt)
+  return max(bkt)
 
-  def summer(rge):
-    sum1 = 0
-    for j in range(rge):
-      sum1 += arr[j]
-    return sum1
 
 
-  for i in range(len(arr)):
-    print(bkt)
-    bkt.append(summer(i))
 
-  if max(bkt) == 0: 
-    return max(arr)
-  else: 
-    return max(bkt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 from nose.tools import assert_equal
 
@@ -32,3 +77,23 @@ class LargeContTest(object):
 #Run Test
 t = LargeContTest()
 t.test(large_cont_sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
