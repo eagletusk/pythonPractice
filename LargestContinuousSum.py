@@ -22,28 +22,41 @@
 
 
 def large_cont_sum(arr):
+
   if len(arr) == 2:
     return (max(arr))
 
   if len(arr) == 1:
     return arr[0]
 
-  i = 0
-  j = 0
-  sum = 0
-  bkt = []
-  while j < len(arr):
-    while i < len(arr)-1:
-      sum += arr[i]
-      i+=1
-      print(i)
-    bkt.append(sum)
-    sum = 0
-    j+=1
-    i = j
+  if len(arr) == 0:
+    return 0
+
+  max_sum = current_sum = arr[0]
+
+  for num in arr[1:]:
+    current_sum = max(current_sum+num,num)
+    max_sum = max(current_sum, max_sum)
+    
+  print(max_sum)
+  return max_sum
+
+  # i = 0
+  # j = 0
+  # sum = 0
+  # bkt = []
+  # while j < len(arr):
+  #   while i < len(arr)-1:
+  #     sum += arr[i]
+  #     i+=1
+  #     print(i)
+  #   bkt.append(sum)
+  #   sum = 0
+  #   j+=1
+  #   i = j
  
-  print(bkt)
-  return max(bkt)
+  # print(bkt)
+  # return max(bkt)
 
 
 
