@@ -40,13 +40,13 @@ import sys
 # import ValidMountainArray
 # import dynamicArray
 
-# import anagramValid
+import anagramValid
 # import ArrayPairSum
 # import FindtheMissingElement
 # import LargestContinuousSum
 # import SentenceReversal
 # import StringCompression
-import UniqueCharactersinString
+# import UniqueCharactersinString
 
 
 
