@@ -1,11 +1,21 @@
-def finder(arr1,arr2):
-    for i in arr2:
-      if i in arr1:
-        print (arr1, arr2,i)
-        arr1.remove(i)
-    return arr1[0]
+# def finder(arr1,arr2):
+#     for i in arr2:
+#       if i in arr1:
+#         print (arr1, arr2,i)
+#         arr1.remove(i)
+#     return arr1[0]
 
-   
+#  alternative sloution
+def finder(arr1,arr2):
+    num = 0
+    for n in arr1:
+        num += n
+    print (num)
+    for n in arr2:
+        num -= n
+    print(num)
+    return num
+    pass 
  
     
 
