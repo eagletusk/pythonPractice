@@ -43,8 +43,8 @@ import sys
 # import anagramValid
 # import ArrayPairSum
 # import FindtheMissingElement
-import LargestContinuousSum
-# import SentenceReversal
+# import LargestContinuousSum
+import SentenceReversal
 # import StringCompression
 # import UniqueCharactersinString
 

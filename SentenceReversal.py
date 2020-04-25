@@ -18,8 +18,26 @@ def rev_word2(s):
   print(abc)
   return temp
 
-def rev_word(s):
+def rev_word3(s):
   return " ".join(reversed(s.split()))
+
+def rev_word(s):
+
+
+  word = []
+  i =0
+  while i < len(s):
+    if s[i] != ' ' :
+      word_start = i
+      while (s[i] not in ' ') and i < len(s):
+        i+=1
+      word.append(s[word_start:i])
+    i+=1
+  stack = []
+  for j in word:
+    stack.append(word.pop())
+
+  " ".join(stack)
 
 
 """
