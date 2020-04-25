@@ -17,16 +17,35 @@
 #     return num
 #     pass 
 
-def finder(arr1, arr2): 
-    result=0 
+# def finder(arr1, arr2): 
+#     result=0 
     
-    # Perform an XOR between the numbers in the arrays
-    for num in arr1+arr2: 
-        result^=num 
-        print (result)
+#     # Perform an XOR between the numbers in the arrays
+#     for num in arr1+arr2: 
+#         result^=num 
+#         print (result)
         
-    return result 
+#     return result 
     
+import collections
+
+def finder(arr1,arr2):
+  d = {}
+
+  for num in arr2:
+    if num in d:
+      d[num] +=1
+    else:
+      d[num] =1
+
+  for num2 in arr1:
+    print(num2, d, d[num2])
+    d[num]-=1
+
+  for num3 in arr1:
+    if d[num3] ==1:
+      return num3
+  return False
 
 """
 RUN THIS CELL TO TEST YOUR SOLUTION
