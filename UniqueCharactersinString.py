@@ -1,12 +1,15 @@
 # Unique Characters in String
 
-def uni_char(s):
+def uni_char1(s):
   
   if len(s) ==1 :
     return False
   
   # d = { char:(s.count(char)) for char in s }
-  d = {char:(s.count(char))for char in s}
+  # d = {char:(s.count(char))for char in s}
+  # d = {char:(s.count(char)) for char in s}
+  d = {char:(s.count(char)) for char in s}
+
   print(d)
 
   for value in d:
@@ -14,6 +17,38 @@ def uni_char(s):
       return False
   
   return True
+
+# def uni_char(s):
+
+#   if len(s) ==1 :
+#     return False
+
+#   u = set()  
+
+#   for c in s:
+#     if c in u:
+#       return False
+#     else:
+#       u.add(c)
+
+#   print(u)
+#   return True
+  
+
+def uni_char(s):
+
+  u = set()
+
+  for num in s:
+    if num in u:
+      return False
+    else:
+      u.add(num)
+  print(u)
+  return True
+
+
+
 
 
 
