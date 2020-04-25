@@ -6,17 +6,26 @@
 #     return arr1[0]
 
 #  alternative sloution
-def finder(arr1,arr2):
-    num = 0
-    for n in arr1:
-        num += n
-    print (num)
-    for n in arr2:
-        num -= n
-    print(num)
-    return num
-    pass 
- 
+# def finder(arr1,arr2):
+#     num = 0
+#     for n in arr1:
+#         num += n
+#     print (num)
+#     for n in arr2:
+#         num -= n
+#     print(num)
+#     return num
+#     pass 
+
+def finder(arr1, arr2): 
+    result=0 
+    
+    # Perform an XOR between the numbers in the arrays
+    for num in arr1+arr2: 
+        result^=num 
+        print (result)
+        
+    return result 
     
 
 """
