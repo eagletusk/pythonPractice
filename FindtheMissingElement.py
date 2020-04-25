@@ -29,7 +29,7 @@
     
 import collections
 
-def finder(arr1,arr2):
+def finder2(arr1,arr2):
   d = {}
 
   for num in arr2:
@@ -52,6 +52,32 @@ def finder(arr1,arr2):
         print(num3)
         return num3
   return False
+
+
+def finder(arr1,arr2):
+  # cant use sets
+  d= {}
+
+  for i in arr1:
+    if i in d:
+      d[i] +=1
+    else:
+      d[i] = 1
+
+  for e in arr2:
+    if e in d:
+      d[e] -=1
+    else:
+      pass
+      
+  print(d)
+  for j in d:
+    if d[j] == 0:
+      pass
+    else: 
+      return j
+
+
 
 
 import collections
