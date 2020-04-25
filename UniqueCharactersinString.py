@@ -5,7 +5,8 @@ def uni_char(s):
   if len(s) ==1 :
     return False
   
-  d = { char:(s.count(char)) for char in s }
+  # d = { char:(s.count(char)) for char in s }
+  d = {char:(s.count(char))for char in s}
   print(d)
 
   for value in d:
