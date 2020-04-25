@@ -37,15 +37,46 @@ def finder(arr1,arr2):
       d[num] +=1
     else:
       d[num] =1
-
+  print(d)
   for num2 in arr1:
-    print(num2, d, d[num2])
-    d[num]-=1
+    print(num2, d, )
+    if num2 in d:
+        d[num2]-=1
+    else:
+        print (num2)
+        return num2
 
-  for num3 in arr1:
-    if d[num3] ==1:
-      return num3
+  for num3 in d:
+      print(d, d[num3], num3)
+      if d[num3] == -1:
+        print(num3)
+        return num3
   return False
+
+
+import collections
+
+# def finder2(arr1, arr2): 
+    
+#     # Using default dict to avoid key errors
+#     d=collections.defaultdict(int) 
+    
+#     # Add a count for every instance in Array 1
+#     for num in arr2:
+#         d[num]+=1 
+    
+#     # Check if num not in dictionary
+#     for num in arr1: 
+#         if d[num]==0: 
+#             return num 
+        
+#         # Otherwise, subtract a count
+#         else: d[num]-=1 
+
+arr1 = [9,8,7,6,5,4,3,2,1]
+arr2 = [9,8,7,5,4,3,2,1]
+
+finder(arr1,arr2)
 
 """
 RUN THIS CELL TO TEST YOUR SOLUTION
