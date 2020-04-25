@@ -69,6 +69,9 @@ def finder(arr1,arr2):
       d[e] -=1
     else:
       pass
+  arr3 = list(zip(arr1, arr2))
+  print()
+  print(arr3)
       
   print(d)
   for j in d:
