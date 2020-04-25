@@ -1,4 +1,4 @@
-def rev_word(s):
+def rev_word2(s):
   abc = s.split(" ")
 
   i = 0
@@ -18,7 +18,10 @@ def rev_word(s):
   print(abc)
   return temp
 
-  
+def rev_word(s):
+  return " ".join(reversed(s.split()))
+
+
 """
 RUN THIS CELL TO TEST YOUR SOLUTION
 """
