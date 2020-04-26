@@ -49,25 +49,64 @@
 
 '''AAAABBBBCCCCCDDEEEE to A4B4C5D2E4'''
 def compress(s):
-  if len(s) == 0:
+
+  i = 1
+  count = 1
+  r = ''
+  if len(s)==0:
     return s
 
-
-  i = 1 
-  count = 1 
-  r = ''
-  start =0 
   while i < len(s):
-    start = i-1
     if s[i-1] == s[i]:
       count +=1
-    else: 
-      r = r + s[start] + str(count)
+    else:
+      r = r + s[i-1] + str(count)
       count = 1
-    i+=1
-
+    i +=1
+  
   r = r + s[i-1] + str(count)
   return r
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def compress2(s):
+#   if len(s) == 0:
+#     return s
+
+
+#   i = 1 
+#   count = 1 
+#   r = ''
+#   start =0 
+#   while i < len(s):
+#     start = i-1
+#     if s[i-1] == s[i]:
+#       count +=1
+#     else: 
+#       r = r + s[start] + str(count)
+#       count = 1
+#     i+=1
+
+#   r = r + s[i-1] + str(count)
+#   return r
 
 
 
