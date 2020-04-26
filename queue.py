@@ -15,11 +15,11 @@ class Queue(object):
   def size(self):
     return len(self.items)
 
-Q = Queue()
-print(Q.isEmpty())
-Q.enqueue(12)
-Q.enqueue(13)
+# Q = Queue()
+# print(Q.isEmpty())
+# Q.enqueue(12)
+# Q.enqueue(13)
 
-print(Q.items,Q.size())
-print(Q.dequeue())
-print(Q.items)
+# print(Q.items,Q.size())
+# print(Q.dequeue())
+# print(Q.items)
