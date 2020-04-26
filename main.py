@@ -47,7 +47,8 @@ import sys
 # import SentenceReversal
 # import StringCompression
 # import UniqueCharactersinString
-import stack
+# import stack
+import queue
 
 
 
