@@ -32,23 +32,32 @@ def uni_char1(s):
 #       u.add(c)
 
 #   print(u)
-#   return True
+# #   return True
   
 
+# def uni_char(s):
+
+#   u = set()
+
+#   for num in s:
+#     if num in u:
+#       return False
+#     else:
+#       u.add(num)
+#   print(u)
+#   return True
+
+
 def uni_char(s):
+  b = set()
 
-  u = set()
-
-  for num in s:
-    if num in u:
-      return False
+  for i in s:
+    if not i in b:
+      b.add(i)
+      print(b)
     else:
-      u.add(num)
-  print(u)
+      return False
   return True
-
-
-
 
 
 

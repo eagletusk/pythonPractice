@@ -49,7 +49,7 @@
 
 '''AAAABBBBCCCCCDDEEEE to A4B4C5D2E4'''
 def compress(s):
-
+  s = s.upper()
   i = 1
   count = 1
   r = ''
