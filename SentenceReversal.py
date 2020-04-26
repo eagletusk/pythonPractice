@@ -28,17 +28,22 @@ def rev_word(s):
   i =0
   while i < len(s):
     if s[i] != ' ' :
+      # print(i,word)
       word_start = i
-      while (s[i] not in ' ') and i < len(s):
+      while i < len(s) and (s[i] != ' ') :
         i+=1
       word.append(s[word_start:i])
     i+=1
   stack = []
-  for j in word:
-    stack.append(word.pop())
+  # print(s,word)
 
-  " ".join(stack)
+  for j in range(len(word)-1,-1,-1):
+    # print(j)
+    stack.append(word[j])
 
+
+  return " ".join(stack)
+  
 
 """
 RUN THIS CELL TO TEST YOUR SOLUTION
