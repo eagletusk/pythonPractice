@@ -44,8 +44,8 @@ import sys
 # import ArrayPairSum
 # import FindtheMissingElement
 # import LargestContinuousSum
-import SentenceReversal
-# import StringCompression
+# import SentenceReversal
+import StringCompression
 # import UniqueCharactersinString
 
 
