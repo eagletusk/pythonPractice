@@ -4,11 +4,11 @@
 
 #!/bin/python3
 
-import math
-import os
-import random
-import re
-import sys
+# import math
+# import os
+# import random
+# import re
+# import sys
 
 # #greet file
 # import greet
@@ -48,7 +48,9 @@ import sys
 # import StringCompression
 # import UniqueCharactersinString
 # import stack
-import queue
+# import queue
+import deque
+
 
 
 
